@@ -27,5 +27,13 @@ bool Title::init()
         return false;
     }
 
+    // 画面サイズを取得
+    Size visibleSize { Director::getInstance()->getVisibleSize() };
+
+    // 背景を設置
+    Sprite* background { Sprite::create("title.png") };
+    background->setPosition(visibleSize / 2);
+    this->addChild(background);
+
     return true;
 }
