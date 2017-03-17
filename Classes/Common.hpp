@@ -9,5 +9,6 @@
 #ifndef Common_h
 #define Common_h
 
+#define MENU 4 //　メニューボタンの個数
 
 #endif /* Common_h */
