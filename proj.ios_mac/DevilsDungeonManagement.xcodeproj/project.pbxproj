@@ -63,6 +63,9 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		D301BC601E7FEFE8005F2EFA /* SettingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D301BC5E1E7FEFE8005F2EFA /* SettingScene.cpp */; };
+		D301BC631E7FF005005F2EFA /* DemonsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D301BC611E7FF005005F2EFA /* DemonsScene.cpp */; };
+		D301BC661E7FF031005F2EFA /* DungeonsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D301BC641E7FF031005F2EFA /* DungeonsScene.cpp */; };
 		D304A6861E7A66D700A26392 /* image in Resources */ = {isa = PBXBuildFile; fileRef = D304A6851E7A66D700A26392 /* image */; };
 		D3D2DA0A1E7A56DD00F5151F /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3D2DA081E7A56DD00F5151F /* Title.cpp */; };
 		D3D2DA0D1E7A56F900F5151F /* HomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3D2DA0B1E7A56F900F5151F /* HomeScene.cpp */; };
@@ -160,6 +163,12 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D301BC5E1E7FEFE8005F2EFA /* SettingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingScene.cpp; sourceTree = "<group>"; };
+		D301BC5F1E7FEFE8005F2EFA /* SettingScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SettingScene.hpp; sourceTree = "<group>"; };
+		D301BC611E7FF005005F2EFA /* DemonsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemonsScene.cpp; sourceTree = "<group>"; };
+		D301BC621E7FF005005F2EFA /* DemonsScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemonsScene.hpp; sourceTree = "<group>"; };
+		D301BC641E7FF031005F2EFA /* DungeonsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DungeonsScene.cpp; sourceTree = "<group>"; };
+		D301BC651E7FF031005F2EFA /* DungeonsScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DungeonsScene.hpp; sourceTree = "<group>"; };
 		D304A6851E7A66D700A26392 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
 		D304A6871E7C325F00A26392 /* Common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Common.hpp; sourceTree = "<group>"; };
 		D3D2DA081E7A56DD00F5151F /* Title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title.cpp; sourceTree = "<group>"; };
@@ -308,6 +317,10 @@
 			isa = PBXGroup;
 			children = (
 				D304A6871E7C325F00A26392 /* Common.hpp */,
+				D301BC5E1E7FEFE8005F2EFA /* SettingScene.cpp */,
+				D301BC5F1E7FEFE8005F2EFA /* SettingScene.hpp */,
+				D301BC611E7FF005005F2EFA /* DemonsScene.cpp */,
+				D301BC621E7FF005005F2EFA /* DemonsScene.hpp */,
 				D3D2DA081E7A56DD00F5151F /* Title.cpp */,
 				D3D2DA091E7A56DD00F5151F /* Title.hpp */,
 				D3D2DA0B1E7A56F900F5151F /* HomeScene.cpp */,
@@ -316,6 +329,8 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				D301BC641E7FF031005F2EFA /* DungeonsScene.cpp */,
+				D301BC651E7FF031005F2EFA /* DungeonsScene.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -520,8 +535,11 @@
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				D3D2DA0D1E7A56F900F5151F /* HomeScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				D301BC601E7FEFE8005F2EFA /* SettingScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				D301BC631E7FF005005F2EFA /* DemonsScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				D301BC661E7FF031005F2EFA /* DungeonsScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
