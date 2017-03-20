@@ -40,18 +40,21 @@ bool HomeScene::init() {
         CCLOG("test");
     })};
     menuItemImage.pushBack(home);
-    MenuItemImage* setting { MenuItemImage::create("settingBackground.png", "settingBackground_hover.png", [](Ref *sender) {
-        CCLOG("setting");
-    })};
-    menuItemImage.pushBack(setting);
-    MenuItemImage* demon { MenuItemImage::create("demonBackground.png", "demonBackground_hover.png", [](Ref *sender) {
-        CCLOG("demon");
-    })};
-    menuItemImage.pushBack(demon);
+
     MenuItemImage* dungeon { MenuItemImage::create("dungeonBackground.png", "dungeonBackground_hover.png", [](Ref *sender) {
         CCLOG("dungeon");
     })};
     menuItemImage.pushBack(dungeon);
+    
+    MenuItemImage* demon { MenuItemImage::create("demonBackground.png", "demonBackground_hover.png", [](Ref *sender) {
+        CCLOG("demon");
+    })};
+    menuItemImage.pushBack(demon);
+
+    MenuItemImage* setting { MenuItemImage::create("settingBackground.png", "settingBackground_hover.png", [](Ref *sender) {
+        CCLOG("setting");
+    })};
+    menuItemImage.pushBack(setting);
 
     for (int i = 0; i < MENU; i++) {
         menuItemImage.at(i)->setAnchorPoint(Vec2(0, 0));
