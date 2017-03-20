@@ -34,6 +34,11 @@ bool HomeScene::init() {
     background->setPosition(visibleSize / 2);
     this->addChild(background);
 
+    // ステータスバーを追加
+    Sprite *status { Sprite::create("status.png") };
+    status->setPosition(visibleSize / 2);
+    this->addChild(status);
+
     // メニューを作成
     Vector<MenuItemImage *> menuItemImage;
     MenuItemImage* home { MenuItemImage::create("homeBackground.png", "homeBackground_hover.png", [](Ref *sender) {
@@ -45,7 +50,7 @@ bool HomeScene::init() {
         CCLOG("dungeon");
     })};
     menuItemImage.pushBack(dungeon);
-    
+
     MenuItemImage* demon { MenuItemImage::create("demonBackground.png", "demonBackground_hover.png", [](Ref *sender) {
         CCLOG("demon");
     })};
