@@ -34,7 +34,7 @@ bool DemonsScene::init() {
     Size visibleSize { Director::getInstance()->getVisibleSize() };
 
     // 背景を追加
-    Sprite *background { Sprite::create("home.png") };
+    Sprite *background { Sprite::create("demons.png") };
     background->setPosition(visibleSize / 2);
     this->addChild(background);
 
