@@ -51,7 +51,6 @@ bool Title::init()
         }
     });
 
-
     return true;
 }
 

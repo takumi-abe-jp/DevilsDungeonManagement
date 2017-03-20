@@ -6,9 +6,14 @@
 //
 //
 
+
 #include "HomeScene.hpp"
-#include "cocos2d.h"
 #include "Common.hpp"
+#include "cocos2d.h"
+#include "DungeonsScene.hpp"
+#include "DemonsScene.hpp"
+#include "SettingScene.hpp"
+#include <cocos/ui/UIWidget.h>
 
 USING_NS_CC;
 
@@ -42,22 +47,31 @@ bool HomeScene::init() {
     // メニューを作成
     Vector<MenuItemImage *> menuItemImage;
     MenuItemImage* home { MenuItemImage::create("homeBackground.png", "homeBackground_hover.png", [](Ref *sender) {
-        CCLOG("test");
+        CCLOG("home");
     })};
     menuItemImage.pushBack(home);
 
     MenuItemImage* dungeon { MenuItemImage::create("dungeonBackground.png", "dungeonBackground_hover.png", [](Ref *sender) {
         CCLOG("dungeon");
+        Scene *newScene { DungeonsScene::createScene() };
+        auto fade = TransitionTurnOffTiles::create(0.5f, newScene);
+        Director::getInstance()->replaceScene(fade);
     })};
     menuItemImage.pushBack(dungeon);
 
     MenuItemImage* demon { MenuItemImage::create("demonBackground.png", "demonBackground_hover.png", [](Ref *sender) {
         CCLOG("demon");
+        Scene *newScene { DemonsScene::createScene() };
+        auto fade = TransitionTurnOffTiles::create(0.5f, newScene);
+        Director::getInstance()->replaceScene(fade);
     })};
     menuItemImage.pushBack(demon);
 
     MenuItemImage* setting { MenuItemImage::create("settingBackground.png", "settingBackground_hover.png", [](Ref *sender) {
         CCLOG("setting");
+        Scene *newScene { SettingScene::createScene() };
+        auto fade = TransitionTurnOffTiles::create(0.5f, newScene);
+        Director::getInstance()->replaceScene(fade);
     })};
     menuItemImage.pushBack(setting);
 
